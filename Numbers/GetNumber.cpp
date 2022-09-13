@@ -1,6 +1,9 @@
 /* Created by Tushardeep Singh */
 /* Just started*/
 
+#include <iostream>
+using namespace std;
+
 /* Function name : getMin
    Input : EnteredNumber[], size, min
    *min gets assigned minimum value that is entered by user. */
@@ -26,8 +29,11 @@ for(int i = 1; i <= size; i++){
  input : EnteredNumber, size, max
  returns "max2nd" which is the 2nd highest number entered by the user.*/
 float max2nd(float EnteredNumber[], int size, float *max){
-    int max2nd = 0;
+    float max2nd = 0;
     
+    if(size == 1){
+        max2nd = *max;
+    }
     for(int i = 2; i <= size; i ++){
         if( (EnteredNumber[i] < *max)  &&  (EnteredNumber[i] > EnteredNumber[i-1]) ){
             max2nd = EnteredNumber[i];
@@ -35,10 +41,3 @@ float max2nd(float EnteredNumber[], int size, float *max){
     }
     return max2nd;
 }
-
-
-
-
-
-
-
