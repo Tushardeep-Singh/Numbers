@@ -22,6 +22,9 @@ for(int i = 1; i <= size; i++){
     return *max;
 }
 
+/* function name : max2nd
+ input : EnteredNumber, size, max
+ returns "max2nd" which is the 2nd highest number entered by the user.*/
 float max2nd(float EnteredNumber[], int size, float *max){
     int max2nd = 0;
     
