@@ -7,7 +7,6 @@
 using namespace std;
 
 
-
 int main(){
     cout << "               NUMBERS " << endl;
     cout << "               -------\n" << endl;
@@ -76,6 +75,8 @@ int main(){
         cout << "Division of max. and mini. = " << divide(max, min) << endl;
     else
         cout << "Division is not possible as the min is 0"<< endl;
-    }
     
+    cout << "Second highest number = " << max2nd(EnteredNumber, count, &max) << endl;
+    
+    }
 
