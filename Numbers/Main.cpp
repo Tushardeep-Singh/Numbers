@@ -10,19 +10,20 @@ using namespace std;
 int main(){
     cout << "               NUMBERS " << endl;
     cout << "               -------\n" << endl;
+       
+    int count;
+    
+    for(;;){
+        cout << "How many numbers would you like to input ? (<= 10)" << endl;
+        cout << "-> ";
+        cin >> count;
         
-    int count = 1;
-    
-    while (count == 1)
-    {
-    cout << "How many numbers would you like to input ? (<= 10)" << endl;
-    cout << "-> ";
-    cin >> count;
-    
-    if(count > 10 || count < 0)
-        cout << "ERROR : Maximum allowed 10 and non-negative \n" << endl;
-    else
-        break;
+        if(count > 10 || count < 0)
+            cout << "ERROR : Maximum allowed 10 and non-negative \n" << endl;
+        else if(count == 0)
+            cout << "Really ?\n" << endl;
+        else
+            break;
     }
     
     cout << "\n" << "Enter Numbers (maybe decimal) :- " << endl;
@@ -79,4 +80,3 @@ int main(){
     cout << "Second highest number = " << max2nd(EnteredNumber, count, &max) << endl;
     
     }
-
