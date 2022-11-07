@@ -1,3 +1,4 @@
+
 /* Created by Tushardeep Singh */
 /* Just started*/
 
@@ -8,7 +9,8 @@ using namespace std;
    Input : EnteredNumber[], size, min
    *min gets assigned minimum value that is entered by user. */
  void getMin(float EnteredNumber[], int size,float *min){
-    for(int i = 1; i <= size; i++){
+     size_t i {1};
+    for( ; i <= size; ++i){
         if(EnteredNumber[i] < *min)
             *min = EnteredNumber[i];
     }
@@ -18,7 +20,8 @@ using namespace std;
    Input : EnteredNumber[], size, max
    *max gets assigned maximum value user has entered. */
 float getMax(float EnteredNumber[], int size, float *max){
-for(int i = 1; i <= size; i++){
+    size_t i {1};
+for( ; i <= size; ++i){
     if(EnteredNumber[i] > *max)
         *max = EnteredNumber[i];
    }
@@ -34,7 +37,8 @@ float max2nd(float EnteredNumber[], int size, float *max){
     if(size == 1){
         max2nd = *max;
     }
-    for(int i = 2; i <= size; i ++){
+    size_t i {2};
+    for( ; i <= size; ++i){
         if( (EnteredNumber[i] < *max)  &&  (EnteredNumber[i] > EnteredNumber[i-1]) ){
             max2nd = EnteredNumber[i];
         }

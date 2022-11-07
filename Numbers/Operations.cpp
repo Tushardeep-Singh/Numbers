@@ -1,6 +1,7 @@
 //  Created by Tushardeep Singh.
-
+#include <iostream>
 #include "Operations.h"
+using namespace std;
 
 /* Funtion name : multiplyAll
    inputs : EnteredNumbers[], size
@@ -9,14 +10,13 @@
 
 float multiplyAll(float EnteredNumbers[], int size){
     float result = 1;
-    
-    for(int i = 1; i <= size; i++){
+    size_t i {1};
+    for( ; i <= size; ++i){
         result = ( result * EnteredNumbers[i] );
     }
     
     return result;
 }
-
 
 /* function name : diff
  inputs : max, min
@@ -24,6 +24,7 @@ float multiplyAll(float EnteredNumbers[], int size){
 float diff (float max, float min){
 float difference = (max - min);
 return difference;
+
 }
 
 

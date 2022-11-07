@@ -1,15 +1,18 @@
+
 //  Created by Tushardeep Singh.
 
 #include <stdio.h>
 #include <iostream>
 #include "GetNumber.h"
 #include "Operations.h"
+#include <iomanip>
 using namespace std;
 
 
 int main(){
-    cout << "               NUMBERS " << endl;
-    cout << "               -------\n" << endl;
+    const size_t colsize {24};
+    cout << setw(colsize) << "NUMBERS " << endl;
+    cout << setw(colsize) << "-------\n" << endl;
        
     int count;
     
@@ -18,9 +21,12 @@ int main(){
         cout << "-> ";
         cin >> count;
         
-        if(count > 10 || count < 0)
+        const size_t CONST1 {10};
+        const size_t CONST2 {0};
+        
+        if(count > CONST1 || count < CONST2)
             cout << "ERROR : Maximum allowed 10 and non-negative \n" << endl;
-        else if(count == 0)
+        else if(count == CONST2)
             cout << "Really ?\n" << endl;
         else
             break;
@@ -32,7 +38,7 @@ int main(){
     /* Dynamic array used */
     float *EnteredNumber = new float[count];
     
-    for(int i = 1; i <= count; i++){
+    for(size_t i = 1; i <= count; i++){
         cout << "-> number " << i << " : ";
         cin >> EnteredNumber[i];
     }
@@ -42,7 +48,7 @@ int main(){
     
     cout << "\nYou entered : (";
     
-    for(int i = 1; i <= (count - 1); i++){
+    for(size_t i = 1; i <= (count - 1); ++i){
         cout << *(EnteredNumber + i) << ", ";
     }
     cout << EnteredNumber[count] << ")" << endl;
@@ -78,5 +84,4 @@ int main(){
         cout << "Division is not possible as the min is 0"<< endl;
     
     cout << "Second highest number = " << max2nd(EnteredNumber, count, &max) << endl;
-    
     }

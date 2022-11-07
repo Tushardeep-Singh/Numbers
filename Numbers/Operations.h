@@ -23,4 +23,3 @@ float multiply(float max, float min);
  returns division of max and min*/
 float divide(float max, float min);
 
-
