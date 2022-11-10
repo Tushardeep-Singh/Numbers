@@ -11,8 +11,10 @@ using namespace std;
 
 int main(){
     const size_t colsize {24};
-    cout << setw(colsize) << "NUMBERS " << endl;
-    cout << setw(colsize) << "-------\n" << endl;
+    cout << right;
+    cout << setfill('-');
+    cout << "|" << setw(colsize) << "NUMBERS" << setw(colsize) << "|" << endl;
+    cout << "|" << setw(colsize) << "-" << setw(colsize) << "|" << "\n" << endl;
        
     int count;
     
